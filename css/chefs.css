@@ -1,0 +1,259 @@
+/* =========== */
+.page__our {}
+
+.page__chefs {}
+
+/* ============ */
+/* header */
+/* header */
+/* our */
+.our {
+    background: url('../img/chefs/our/fon.jpg') no-repeat;
+    background-size: cover;
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    position: relative;
+}
+
+.our::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0C0C0C;
+    opacity: 0.5;
+}
+
+.our__container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.our__title {
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    font-size: 5.625rem;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #DCCA87;
+}
+
+.our__title:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.our__road {}
+
+.road {}
+
+.road__list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.road__item {}
+
+/* .road__item::after {
+    content: "";
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 3;
+    height: 24px;
+    background: url('../img/chefs/arrow.svg') right no-repeat;
+} */
+
+.road__link {
+    display: flex;
+    font-family: 'Cormorant Upright';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4375rem;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+@media (max-width:48em) {
+    .our {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    .our__title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:30em) {
+    .our {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .our__title {
+        font-size: 3rem;
+    }
+}
+
+/* our */
+/* chefs */
+
+.chefs {
+    background: url('../img/wave\ element.svg');
+    padding-top: 9.5rem;
+}
+
+.chefs__container {}
+
+.chefs__persons {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    place-items: center;
+}
+
+.chefs__person {}
+
+.person-chefs {}
+
+.person-chefs:hover .person-chefs__name {
+    color: #DCCA87;
+}
+
+.person-chefs__image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.person-chefs__image::before {
+    content: '';
+    background: #0C0C0C;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+}
+
+.chef__picture {
+    border: 1px solid #DCCA87;
+}
+
+.person-chefs__image:hover .chef__picture {
+    background: #0C0C0C;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.person-chefs__image:hover .person-chefs__social {
+    opacity: 1;
+}
+
+.person-chefs__image img {
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.person-chefs__social {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 4;
+}
+
+.person-chefs__social_items {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-chefs__social_items:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.person-chefs__social_item {}
+
+.person-chefs__social_link {
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    color: #DCCA87;
+}
+
+.person-chefs__social_link::before {
+    content: "";
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    height: 0;
+    border: 1px solid #DCCA87;
+    background-color: #DCCA87;
+    transform: rotate(0) translate(-8px, -5px);
+}
+
+.person-chefs__name {
+    font-family: 'Cormorant Upright';
+    font-weight: 600;
+    font-size: 2.8125rem;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.person-chefs__name.active {
+    color: #DCCA87;
+}
+
+.person-chefs__job {
+    line-height: 1.75;
+    color: #FFFFFF;
+}
+
+@media (max-width:62em) {
+    .chefs__persons {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width:48em) {
+    .chefs {
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width:30em) {
+    .chefs {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .person-chefs__image {
+        margin-bottom: 1rem;
+    }
+
+    .chefs__wrap__image {
+        display: none;
+    }
+}
+
+/* chefs */
